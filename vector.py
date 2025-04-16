@@ -13,7 +13,6 @@ logger = logging.getLogger(__file__)
 
 # option = "pizza"
 option = "climate"
-#option = "makespace"
 if option == "pizza":
     csvin = "realistic_restaurant_reviews.csv"
     title = "Title"
@@ -25,14 +24,13 @@ elif option == "climate":
     TEMP_DIR = Path(Path(__file__).parent.parent.parent, "amilib", "temp", "csv", "ipcc")
     logger.info(f"ipcc {TEMP_DIR}")
     csvin = str(Path(TEMP_DIR, "syr_paras.csv"))
-    csvin = "syr_paras.csv"
+    csvin = str(Path(__file__.parent, "syr_paras.csv"))
     title = "title"
     text = "text"
     collection_name = "climate_chapters"
     k_val = 5
 
 assert Path(csvin).exists(), f"no csvin {csvin}"
-# logger.info(f"input from {csvin}")
 df = pd.read_csv(csvin)
 embeddings = OllamaEmbeddings(model="mxbai-embed-large")
 
