@@ -8,8 +8,7 @@ logger = logging.getLogger(__file__)
 model = OllamaLLM(model="llama3.2")
 
 template = """
-You are an expert in answering questions about pizza restaurants
-
+You are an expert in answering questions about climate
 Here are some relevant reviews: {reviews}
 
 Here is the question to answer: {question}
