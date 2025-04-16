@@ -21,19 +21,11 @@ if option == "pizza":
     collection_name = "restaurant_reviews"
     k_val = 5
 
-elif option == "makespace":
-    TEMP_DIR = Path(Path(__file__).parent.parent.parent, "amilib", "temp", "csv", "makespace")
-    logger.info(f"ipcc {TEMP_DIR}")
-    csvin = str(Path(TEMP_DIR, "makespace.csv"))
-    title = "title"
-    text = "text"
-    collection_name = "makespace"
-    k_val = 5
-
 elif option == "climate":
     TEMP_DIR = Path(Path(__file__).parent.parent.parent, "amilib", "temp", "csv", "ipcc")
     logger.info(f"ipcc {TEMP_DIR}")
     csvin = str(Path(TEMP_DIR, "syr_paras.csv"))
+    csvin = "syr_paras.csv"
     title = "title"
     text = "text"
     collection_name = "climate_chapters"
